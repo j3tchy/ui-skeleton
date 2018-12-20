@@ -1,0 +1,13 @@
+version: "3"
+services:
+    web:
+        build: .
+        working_dir: /app
+        container_name: "rail-nav-frontend"
+        # depends_on:
+        # - mongodb
+        command: "npm run dev"
+        ports:
+            - "1234:1234"
+        volumes:
+            - ./:/app
